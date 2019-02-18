@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:showIn="@layout/activity_search"
+        tools:context=".ui.activity.DetailActivity">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:orientation="horizontal">
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:id="@+id/image_view"/>
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="10dp"
+                      android:layout_gravity="start"
+                      android:orientation="vertical">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/title_view"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/director_view"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/year_view"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/plot_view"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/favorite_add_btn"
+                android:onClick="addToFavorite"
+                android:text="@string/add_to_favorites"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/favorite_delete_btn"
+                android:onClick="deleteFromFavorite"
+                android:text="@string/delete_from_favorites"/>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        android:alpha="0.4"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center" />
+</FrameLayout>
+</LinearLayout>
